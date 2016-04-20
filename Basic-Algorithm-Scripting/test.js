@@ -123,3 +123,41 @@ function slasher(arr, howMany) {
 }
 
 console.log(slasher([1, 2, 3], 2));
+
+function mutation(arr) {
+  var x = arr[0].toLowerCase();
+  var y = arr[1].toLowerCase();
+  for (var i=0; i< y.length; i++){
+      if (x.indexOf(y[i]) === -1){
+         return false;
+      }
+  }
+  return true;
+}
+
+console.log(mutation(["hello", "u"]));
+
+/*Remove all falsy Remove all falsy values from an array.
+Falsy values in JavaScript are false, null, 0, "", undefined, and NaN. */
+function bouncer(arr) {
+  var cleaned_arr = [];
+  for (var i =0; i<arr.length;i++){
+  if(arr[i]){
+      cleaned_arr.push(arr[i]);
+  }
+}
+
+return cleaned_arr;
+}
+
+console.log(bouncer([7, "ate", "", true, 9, NaN, undefined,10]));
+
+/*You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments.
+Remove all elements from the initial array that are of the same value as these arguments.*/
+
+function destroyer(arr) {
+  // Remove all the values
+  return arr;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
