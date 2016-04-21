@@ -156,8 +156,36 @@ console.log(bouncer([7, "ate", "", true, 9, NaN, undefined,10]));
 Remove all elements from the initial array that are of the same value as these arguments.*/
 
 function destroyer(arr) {
-  // Remove all the values
-  return arr;
+  var test_array = arguments[0];
+  var finished_arr = [];
+  for (var j =0; j< (test_array.length); j++){
+      var inList = true;
+    for (var i=1;i<arguments.length;i++){
+        inList = inList && test_array[j]!=arguments[i];
+    }
+      if ( inList )
+      {
+        finished_arr.push(test_array[j]);
+      }
+    }
+  return finished_arr;
 }
 
-destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+console.log(destroyer([3, 5, 1, 2,3,2,3,2,3,2], 2, 3, 5));
+
+/*Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted.
+
+For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
+
+Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
+*/
+
+function getIndexToIns(arr, num) {
+  arr.push(num);
+  arr.sort(function(a, b) {
+  return a - b;
+});
+  return arr.indexOf(num);
+}
+
+console.log(getIndexToIns([2, 20, 10], 19));
