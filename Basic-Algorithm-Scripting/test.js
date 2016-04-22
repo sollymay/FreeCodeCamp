@@ -204,7 +204,6 @@ function rot13(str) { // LBH QVQ VG!
     if (str[i].charCodeAt()<65){
       unshifted.push(String.fromCharCode(str[i].charCodeAt()));
       console.log(str[i].charCodeAt());
-
     }
     else{
         if (str[i].charCodeAt() - 13 > 65){
