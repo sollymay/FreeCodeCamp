@@ -14,12 +14,9 @@ function update(response) {
     response["quoteAuthor"]= "Unknown";
   }
   document.getElementById("author").innerHTML = '- '+response["quoteAuthor"];
-  website += response["quoteText"].replace(/\s/g, '+')+ '+-+'+ response["quoteAuthor"].replace(/\s/g,'+');
+  website += response["quoteText"].replace(/\s/g, '+')+ '+'+ response["quoteAuthor"].replace(/\s/g,'+');
+  $("#tweet").attr("href", website);
 
-  $('#postTweet').click(function(){
-    $("#tweet").attr("href", website);
-
-  });
 
 }
 
