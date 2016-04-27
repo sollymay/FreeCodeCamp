@@ -9,6 +9,16 @@
 .edge{
   margin: auto;
 }
+#tweet{
+  border-radius: 0px;
+  border-style: none;
+  padding: 19.5px;
+  margin-bottom: 9px;
+  background-color: black !important;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  text-decoration: none;
+}
 .button{
   border-radius: 0px;
   border-style: none;
@@ -81,4 +91,10 @@ padding: 11px 14px 11px 14px;
 }
 #linkedin:hover{
   color:#0C7CB6;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+   .collapse {
+       display: none !important;
+   }
 }
