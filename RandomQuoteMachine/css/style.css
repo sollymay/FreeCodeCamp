@@ -34,8 +34,7 @@
 }
 
 .footer{
-  position:absolute;
-  bottom: 5%;
+
   width: 100%;
   color:black !important;
   margin-top: auto;
@@ -46,6 +45,7 @@
 }
 .foot{
   font-family: 'Indie Flower', cursive;
+  color: black !important;
 
 }
 .logo:hover{
