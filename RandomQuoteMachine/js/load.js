@@ -13,6 +13,9 @@ $('#quoteGETJSON').click(function() {
 
 function update(response) {
   document.getElementById("quote").innerHTML = response["quoteText"];
+  if (response["quoteAuthor"]===""){
+    response["quoteAuthor"]= "Unknown";
+  }
   document.getElementById("author").innerHTML = '- '+response["quoteAuthor"];
 }
 

@@ -1,15 +1,33 @@
+.content{
+  border-style: solid;
+  border-color: black;
+  margin-top:70px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: white;
+}
+.edge{
+  margin: auto;
+}
 .button{
   border-radius: 0px;
   border-style: none;
   padding: 20px;
+  margin-bottom: 10px;
   background-color: black !important;
   color: white;
   font-family: 'Indie Flower', cursive;
 }
+.button:focus, .button:active, .button.active:focus {
+  outline-style: none !important;
+
+}
+
 .footer{
   position:absolute;
   bottom: 5%;
   width: 100%;
+  color:black !important;
 }
 .mainText{
   font-family: 'Indie Flower';
