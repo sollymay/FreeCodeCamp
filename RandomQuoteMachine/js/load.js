@@ -9,11 +9,15 @@ $('#quoteGETJSON').click(function() {
 });
 
 function update(response) {
+  var website = "https://twitter.com/intent/tweet?text=";
   document.getElementById("quote").innerHTML = response["quoteText"];
   if (response["quoteAuthor"]===""){
     response["quoteAuthor"]= "Unknown";
   }
   document.getElementById("author").innerHTML = '- '+response["quoteAuthor"];
+  website += response["quoteText"].replace(/\s/g, '+')+ '+-+'+ response["quoteAuthor"].replace(/\s/g,'+');
+  $("#tweet").attr("href", website);
+
 }
 
 function handleErr(jqxhr, textStatus, err) {
