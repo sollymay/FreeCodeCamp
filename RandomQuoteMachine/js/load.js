@@ -5,7 +5,6 @@ $('#quoteGETJSON').click(function() {
     .done(update)
     .fail(handleErr);
     $("#body").css("background-color", getRandomColor());
-		changeColor(response);
 });
 
 function update(response) {
@@ -16,7 +15,11 @@ function update(response) {
   }
   document.getElementById("author").innerHTML = '- '+response["quoteAuthor"];
   website += response["quoteText"].replace(/\s/g, '+')+ '+-+'+ response["quoteAuthor"].replace(/\s/g,'+');
-  $("#tweet").attr("href", website);
+
+  $('#postTweet').click(function(){
+    $("#tweet").attr("href", website);
+
+  });
 
 }
 
