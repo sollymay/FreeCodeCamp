@@ -30,7 +30,7 @@ function getRandomColor() {
 }
 
 function getLocation(){
-  var data = getJSON("http://ip-api.com/json");
+  var data = $.getJSON("http://ip-api.com/json");
   return data;
 
 }
