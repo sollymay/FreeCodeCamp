@@ -1,3 +1,33 @@
+
+body{
+  font-family: 'Raleway', sans-serif;
+  background-size:cover;
+}
+#city{
+  font-weight: bold;
+  font-size: 20px;
+}
+.temperature{
+
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: black !important;
+  color: white;
+}
+.button{
+  border-radius: 0px;
+  border-style: solid;
+  padding: 1 0 10 0 px;
+  margin-bottom: 10px;
+  background-color: black !important;
+}
+
+.button:focus, .button:active, .button.active:focus {
+  outline-style: none !important;
+
+}
+
+
 .icon{
   text-align: center !important;
   font-size: 25px;
@@ -6,6 +36,7 @@
 
   color: black;
 }
+
 #twitter:hover{
   color:#58A8E0;
 }
@@ -37,7 +68,8 @@ padding: 11px 14px 11px 14px;
   color:#0C7CB6;
 }
 .footer{
-  margin-top:80px;
+  margin-top:300px;
+
 }
 .foot{
   color:black !important;

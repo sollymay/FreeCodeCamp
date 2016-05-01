@@ -7,7 +7,7 @@
       <script src="js/script.js"></script>
   		<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
   		<link rel="stylesheet" type="text/css" href="css/style.css" />
-  		<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -16,12 +16,16 @@
   <div class="container-fluid">
 
     <div class="row">
-      <div class="col-md-4 text-center">
-        <p id="quote"></p>
-        <p id="data">
-          
-        </p>
-        <button id="getWeather">Get the weather</button>
+
+      <div class="col-md-12 text-center temperature">
+        <p id="city"></p>
+        <span>Current Temperature: </span><span id="temperature"></span><button class="button" id= "units"></button>
+
+
+        <br />
+        <p>Conditions: <span id="conditions"></span></p>
+        <button class="button" id="refresh">Refresh</button>
+
       </div>
     </div>
 
