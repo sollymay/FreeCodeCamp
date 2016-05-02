@@ -1,59 +1,33 @@
-.content{
-  border-style: solid;
-  border-color: black;
-  margin-top:70px;
-  margin-left: 5px;
-  margin-right: 5px;
-  background-color: white;
+
+body{
+  font-family: 'Raleway', sans-serif;
+  background-size:cover;
 }
-.edge{
-  margin: auto;
+#city{
+  font-weight: bold;
+  font-size: 20px;
 }
-#tweet{
-  border-radius: 0px;
-  border-style: none;
-  padding: 19.5px;
-  margin-bottom: auto;
-  background-color: black !important;
-  color: white;
-  font-family: 'Indie Flower', cursive;
-  text-decoration: none;
-}
-.button{
-  border-radius: 0px;
-  border-style: none;
+.temperature{
+
   padding: 20px;
   margin-bottom: 10px;
   background-color: black !important;
   color: white;
-  font-family: 'Indie Flower', cursive;
 }
+.button{
+  border-radius: 0px;
+  border-style: solid;
+  padding: 1 0 10 0 px;
+  margin-bottom: 10px;
+  background-color: black !important;
+}
+
 .button:focus, .button:active, .button.active:focus {
   outline-style: none !important;
 
 }
 
-.footer{
 
-  width: 100%;
-  color:black !important;
-  margin-top: auto;
-}
-.mainText{
-  font-family: 'Indie Flower';
-  font-size:25px;
-}
-.foot{
-  font-family: 'Indie Flower', cursive;
-  color: black !important;
-}
-.logo:hover{
-  color:#ddd;
-}
-
-.logo:visited{
-  color:#ddd;
-}
 .icon{
   text-align: center !important;
   font-size: 25px;
@@ -62,6 +36,7 @@
 
   color: black;
 }
+
 #twitter:hover{
   color:#58A8E0;
 }
@@ -92,7 +67,13 @@ padding: 11px 14px 11px 14px;
 #linkedin:hover{
   color:#0C7CB6;
 }
+.footer{
+  margin-top:300px;
 
+}
+.foot{
+  color:black !important;
+}
 @media (min-width: 768px) and (max-width: 1000px) {
    .collapse {
        display: none !important;

@@ -3,7 +3,6 @@ function palindrome(str) {
   return (str.toLowerCase().replace(/[\W_]+/g, '')).split('').reverse().join('') === str.toLowerCase().replace(/[\W_]+/g, '') ? true:false;
 }
 
-
 console.log(palindrome("eye"));
 
 function findLongestWord(str) {
