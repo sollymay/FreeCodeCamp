@@ -1,11 +1,53 @@
+#filtersubmit {
+    position: relative;
+    z-index: 1;
+    left: -35px;
+    top: 1px;
+    cursor:pointer;
+    width: 0;
+    font-size: 20px;
+    color: black;
+}
+.content{
+  position:absolute;
+	margin-top:50px;
+  top:30%;
+  left:50%;
+  padding:15px;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.footer{
 
+  position:absolute;
+  top:92%;
+  left:50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+
+}
+#filter{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  border-color: black;
+  color: black !important;
+}
 .icon{
   text-align: center !important;
   font-size: 25px;
   border-radius: 50px;
   border-style: solid;
 
+
   color: black;
+}
+h3{
+  color:black;
+  font-family: 'Poiret One', cursive;
 }
 
 #twitter:hover{
@@ -38,12 +80,11 @@ padding: 11px 14px 11px 14px;
 #linkedin:hover{
   color:#0C7CB6;
 }
-.footer{
-  margin-top:300px;
 
-}
 .foot{
   color:black !important;
+  font-family: Indie Flower;
+  font-size: 16px;
 }
 @media (min-width: 768px) and (max-width: 1000px) {
    .collapse {
