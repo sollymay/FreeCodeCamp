@@ -49,7 +49,7 @@ h3{
 
 #twitter:hover{
   color:#58A8E0;
-  border-color: inherit;
+  border-color: #58A8E0;
 }
 #twitter{
 padding: 11px 14px 11px 14px;
@@ -62,25 +62,25 @@ padding: 11px 14px 11px 14px;
 }
 #facebook:hover{
   color:#33659A;
-  border-color: inherit;
+  border-color: #33659A;
 }
 #email{
   padding:11px 12px 11px 14px;
 }
 #email:hover{
   color:#DD4B39;
-  border-color: inherit;
+  border-color: #DD4B39;
 }
 .icon:hover{
   color:#333333;
-  border-color: inherit;
+  border-color: #333333;
 }
 #linkedin{
   padding: 13px 17px 13px 17px;
 }
 #linkedin:hover{
   color:#0C7CB6;
-  border-color: inherit;
+  border-color: #0C7CB6;
 }
 
 .foot{
