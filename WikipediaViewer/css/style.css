@@ -40,8 +40,6 @@ height: 0em;
   font-size: 25px;
   border-radius: 50px;
   border-style: solid;
-
-
   color: black;
 }
 h3{
@@ -62,7 +60,7 @@ padding: 11px 14px 11px 14px;
   padding: 11px 18px 11px 18px;
 }
 #facebook:hover{
-  color:#33659A
+  color:#33659A;
 }
 #email{
   padding:11px 12px 11px 14px;
