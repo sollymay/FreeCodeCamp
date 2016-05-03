@@ -1,15 +1,16 @@
 html, body {
-height: 100%;
+height: 92%;
 }
 .content {
-min-height: 83%;
-height: 83%;
+min-height: 95%;
+height: 95%;
 
 }
-.footer {
+.footer-test {
 height: 0em;
 
 }
+
 
 #filtersubmit {
     position: relative;
