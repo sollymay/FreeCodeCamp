@@ -1,45 +1,35 @@
-html, body {
-height: 92%;
-}
-.content {
-min-height: 95%;
-height: 95%;
-
-}
-.footer-test {
-height: 0em;
-
-}
-
-
 #filtersubmit {
-    position: relative;
-    z-index: 1;
-    left: -35px;
-    top: 1px;
+
     cursor:pointer;
-    width: 0;
-    font-size: 20px;
+
+    font-size: 25px;
     color: black;
 }
-#filter:focus, #filter:active, #filter.active:focus {
-  outline-style: none !important;
-
+.footer{
+	margin-top: 50px;
 }
+
 #filter{
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 10px 10px 10px;
   border-radius: 10px;
   font-size: 20px;
   border-color: black;
   color: black !important;
-}
+	border-width: medium;
+	text-align: center;
 
+}
+#filter:active, #filter:focus, #filter.active:focus{
+  outline-style: none !important;
+
+}
 .icon{
   text-align: center !important;
   font-size: 25px;
   border-radius: 50px;
   border-style: solid;
+
+
   color: black;
 }
 h3{
@@ -49,7 +39,6 @@ h3{
 
 #twitter:hover{
   color:#58A8E0;
-  border-color: #58A8E0;
 }
 #twitter{
 padding: 11px 14px 11px 14px;
@@ -61,26 +50,22 @@ padding: 11px 14px 11px 14px;
   padding: 11px 18px 11px 18px;
 }
 #facebook:hover{
-  color:#33659A;
-  border-color: #33659A;
+  color:#33659A
 }
 #email{
   padding:11px 12px 11px 14px;
 }
 #email:hover{
   color:#DD4B39;
-  border-color: #DD4B39;
 }
 .icon:hover{
   color:#333333;
-  border-color: #333333;
 }
 #linkedin{
   padding: 13px 17px 13px 17px;
 }
 #linkedin:hover{
   color:#0C7CB6;
-  border-color: #0C7CB6;
 }
 
 .foot{
