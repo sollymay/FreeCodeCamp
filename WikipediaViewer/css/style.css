@@ -1,3 +1,16 @@
+html, body {
+height: 100%;
+}
+.content {
+min-height: 83%;
+height: 83%;
+
+}
+.footer {
+height: 0em;
+
+}
+
 #filtersubmit {
     position: relative;
     z-index: 1;
@@ -8,24 +21,8 @@
     font-size: 20px;
     color: black;
 }
-.content{
-  position:absolute;
-	margin-top:50px;
-  top:30%;
-  left:50%;
-  padding:15px;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-.footer{
-
-  position:absolute;
-  top:92%;
-  left:50%;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+#filter:focus, #filter:active, #filter.active:focus {
+  outline-style: none !important;
 
 }
 #filter{
@@ -36,6 +33,7 @@
   border-color: black;
   color: black !important;
 }
+
 .icon{
   text-align: center !important;
   font-size: 25px;

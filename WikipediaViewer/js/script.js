@@ -1,3 +1,3 @@
 $('#filtersubmit').click(function() {
-    alert('Searching for '+$('#filter').val());
+    console.log('Searching for '+$('#filter').val());
 });
