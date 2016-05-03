@@ -16,5 +16,3 @@ $("#filter").keyup(function (e) {
         console.log("you pressed enter");
     }
 });
-
-console.log(form.elements['filter'].onkeypress);
