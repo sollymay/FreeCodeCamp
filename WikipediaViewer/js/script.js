@@ -7,9 +7,9 @@ $( document ).ready(function() {
     		e.preventDefault();
     		$('#filter').animate({width: 'toggle'}).focus();
         $('#filtersubmit').animate({"font-size": "toggle",
-      }, 230);
+      }, 180);
       $('#random').animate({"font-size": "toggle",
-    }, 230);
+    }, 180);
 
     });
 
@@ -67,9 +67,9 @@ function clean(){
         else if ($('#filter').val()==='' && e.keyCode == 8) {
           $('#filter').animate({width: 'toggle'}).focus();
           $('#filtersubmit').animate({"font-size": "toggle",
-        }, 230);
+        }, 180);
         $('#random').animate({"font-size": "toggle",
-      }, 230);
+      }, 180);
 
 
         }
