@@ -46,6 +46,7 @@ function organize(rawData){
   $('.posts').css({
       'border' : '3px solid black',
       'border-radius' : '10px',
+      'background-color':'#f1f3f5'
 });
 }
 

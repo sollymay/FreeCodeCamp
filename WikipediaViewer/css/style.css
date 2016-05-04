@@ -1,3 +1,6 @@
+#body{
+  background-color:#778f9d !important;
+}
 .extract{
 	padding-left:20px;
 }
@@ -32,11 +35,12 @@ a:hover{
   padding: 10px 10px 10px 10px;
   border-radius: 10px;
   font-size: 20px;
-  border-color: black;
-  color: black !important;
+  border-color: #3B3738;
+  color: #3B3738 !important;
 	border-width: medium;
 	text-align: center;
   font-family: 'Poiret One', cursive;
+  background-color: #f1f3f5;
 
 }
 #filter:active, #filter:focus, #filter.active:focus{
@@ -59,7 +63,7 @@ h3{
 }
 
 #twitter:hover{
-  color:#58A8E0;
+  color:#58A8E0 !important;
 }
 #twitter{
 padding: 11px 14px 11px 14px;
@@ -71,22 +75,23 @@ padding: 11px 14px 11px 14px;
   padding: 11px 18px 11px 18px;
 }
 #facebook:hover{
-  color:#33659A
+  color:#33659A !important;
 }
 #email{
   padding:11px 12px 11px 14px;
 }
 #email:hover{
-  color:#DD4B39;
+  color:#DD4B39 !important;
 }
 .icon:hover{
-  color:#333333;
+  color:#333333 !important;
 }
 #linkedin{
+
   padding: 13px 17px 13px 17px;
 }
 #linkedin:hover{
-  color:#0C7CB6;
+  color:#0C7CB6 !important;
 }
 
 .foot{
