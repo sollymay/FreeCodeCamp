@@ -33,7 +33,7 @@ function update(response) {
 
   else if (conditions==='Rain') {
 
-    $(document.body).css({'background-image': 'url(http://7-themes.com/data_images/out/15/6819745-rain-wallpaper.jpg)'});
+    $(document.body).css({'background-image': 'url(http://www.news1130.com/wp-content/blogs.dir/sites/9/2014/12/179783560-e1436807941129.jpg)'});
 
   }
   else if (conditions==='Snow') {
