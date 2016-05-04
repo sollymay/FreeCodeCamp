@@ -70,7 +70,7 @@ function clean(){
         }, 180);
         $('#random').animate({"font-size": "toggle",
       }, 180);
-
+      clean();
 
         }
     });
