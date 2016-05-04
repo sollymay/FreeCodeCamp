@@ -14,9 +14,7 @@ $( document ).ready(function() {
     });
 
 
-function search(){
-  var searchTerms = $('#filter').val();
-    if (searchTerms !== '') {
+function search(searchTerms){
 
       $.ajax({
           type: "GET",
@@ -33,8 +31,6 @@ function search(){
               console.log("there was an error processing your request");
           }
         });
-
-      }
 
     }
 
@@ -58,14 +54,24 @@ function clean(){
 }
 
     $("#filter").keyup(function (e) {
-        if (e.keyCode == 13) {
-            search();
+        var searchTerms = $('#filter').val();
+        if (e.keyCode == 13 && searchTerms!='') {
+            search(searchTerms);
         }
     });
 
     $("#filter").keyup(function (e) {
-        if (e.keyCode == 8 || oldSearch!== $('#filter').val()) {
+        if (e.keyCode == 8 && oldSearch!== $('#filter').val() && $('#filter').val()!=='') {
             clean();
+        }
+        else if ($('#filter').val()==='' && e.keyCode == 8) {
+          $('#filter').animate({width: 'toggle'}).focus();
+          $('#filtersubmit').animate({"font-size": "toggle",
+        }, 230);
+        $('#random').animate({"font-size": "toggle",
+      }, 230);
+
+
         }
     });
 
