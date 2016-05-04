@@ -1,10 +1,28 @@
-#filtersubmit {
+.extract{
+	padding-left:20px;
+}
+.post-title{
+	padding-left:10px;
+}
+p{
+  font-size: 16px;
+  font-family: 'Poiret One', cursive;
+}
+a{
+	text-decoration:none !important;
+	color:black !important;
+}
+a:hover{
+	text-decoration:none !important;
+	color:black !important;
+}
+#filtersubmit, #random {
 
     cursor:pointer;
 
-    font-size: 30px;
+    font-size: 80px;
+
     color: black;
-    padding: 15px 0px 15px 0px;
 }
 .footer{
 	margin-top: 50px;
@@ -18,10 +36,9 @@
   color: black !important;
 	border-width: medium;
 	text-align: center;
+  font-family: 'Poiret One', cursive;
 
 }
-
-
 #filter:active, #filter:focus, #filter.active:focus{
   outline-style: none !important;
 
@@ -31,17 +48,18 @@
   font-size: 25px;
   border-radius: 50px;
   border-style: solid;
+
+
   color: black;
 }
-.content{
-  color:black;
-  font-family: 'Poiret One';
-  font-weight:bolder;
+h3{
+  color:black !important;
+  font-family: 'Poiret One', cursive !important;
+  font-weight: bold !important;
 }
 
 #twitter:hover{
   color:#58A8E0;
-  border-color: #58A8E0;
 }
 #twitter{
 padding: 11px 14px 11px 14px;
@@ -53,26 +71,22 @@ padding: 11px 14px 11px 14px;
   padding: 11px 18px 11px 18px;
 }
 #facebook:hover{
-  color:#33659A;
-  border-color: #33659A;
+  color:#33659A
 }
 #email{
   padding:11px 12px 11px 14px;
 }
 #email:hover{
   color:#DD4B39;
-  border-color: #DD4B39;
 }
 .icon:hover{
   color:#333333;
-  border-color: #333333;
 }
 #linkedin{
   padding: 13px 17px 13px 17px;
 }
 #linkedin:hover{
   color:#0C7CB6;
-  border-color:#0C7CB6;
 }
 
 .foot{
