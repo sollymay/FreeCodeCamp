@@ -41,6 +41,7 @@ a:hover{
 	text-align: center;
   font-family: 'Poiret One', cursive;
   background-color: #f1f3f5;
+  max-width: 200px;
 
 }
 #filter:active, #filter:focus, #filter.active:focus{
