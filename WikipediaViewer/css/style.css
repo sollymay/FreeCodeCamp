@@ -29,6 +29,7 @@ a:hover{
 }
 .footer{
 	margin-top: 50px;
+  min-width: 95%;
 }
 
 #filter{
