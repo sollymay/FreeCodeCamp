@@ -191,3 +191,66 @@ function booWho(bool) {
 }
 
 console.log(booWho(null));
+
+function uniteUnique(arr1, arr2, arr3) {
+  var another_array=[]
+  var testArray =[]
+  for (var i=0; i<arguments.length; i++){
+      testArray=arguments[i]
+     for (var j=0; j<testArray.length; j++){
+
+       if (!(testArray[j] in another_array)){
+         another_array.push(testArray[j])
+       }
+     }
+     testArray=[]
+  }
+  return another_array
+
+
+}
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+function convertHTML(str) {
+  var tempStr = str
+
+  for (var i=0; i<tempStr.length; i++){
+    switch (tempStr[i]) {
+      case '&':
+        tempStr = tempStr.replace('&', '&amp;');
+        break;
+      case '<':
+        tempStr = tempStr.replace('<', '&lt;');
+        break;
+      case '>':
+        tempStr = tempStr.replace('>', '&gt;');
+        break;
+      case"'":
+      tempStr = tempStr.replace("'", '&apos;');
+        break;
+      case '"':
+      tempStr = tempStr.replace('"', '&quot;');
+        break;
+      default:
+        break;
+
+    }
+  }
+  // &colon;&rpar;
+  return tempStr;
+}
+
+console.log(convertHTML('Stuff in "quotation marks"'));
+
+
+function spinalCase(str) {
+  // "It's such a fine line between stupid, and clever."
+  // --David St. Hubbins
+  var waaa = str.toLowerCase().split(" ").join('-');
+
+  return waaa;
+
+}
+
+console.log(spinalCase('This Is Spinal Tap'));
