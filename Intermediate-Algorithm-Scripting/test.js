@@ -205,6 +205,7 @@ function uniteUnique(arr1, arr2, arr3) {
      }
      testArray=[]
   }
+
   return another_array
 
 
@@ -247,9 +248,8 @@ console.log(convertHTML('Stuff in "quotation marks"'));
 function spinalCase(str) {
   // "It's such a fine line between stupid, and clever."
   // --David St. Hubbins
-  var waaa = str.toLowerCase().split(" ").join('-');
-
-  return waaa;
+  return str.replace(/(?!^)([A-Z])/g, ' $1')
+              .replace(/[_\s]+(?=[a-zA-Z])/g, '-').toLowerCase();
 
 }
 
