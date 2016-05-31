@@ -254,3 +254,48 @@ function spinalCase(str) {
 }
 
 console.log(spinalCase('This Is Spinal Tap'));
+
+
+function sumFibs(num) {
+  var w = 1; //start the fibonacci at 1 to add it
+  var a = 0, b = 1, f = 1; //do the fibonacci sequence loop
+    for(var i = 2; i <= num; i++) {
+        f = a + b;
+        a = b;
+        b = f;
+        if (b> num){ //break at the moment we get to the value in question
+          break;
+        }
+        if (f%2 !==0){ //only add the odd values
+          w += f;
+
+        }
+
+    }
+     return w;
+}
+
+console.log(sumFibs(1));
+
+function sumPrimes(num) {
+  var sum=0;
+  function isPrime(value){
+    for(var i = 2; i < value; i++) {
+    if(value % i === 0) {
+        return false;
+      }
+    }
+    return value;
+  }
+
+  for (var i=2; i<=num; i++){
+    if (isPrime(i) === false){}
+    else{
+        sum+= isPrime(i);
+    }
+
+  }
+  return sum;
+}
+
+console.log(sumPrimes(5));
