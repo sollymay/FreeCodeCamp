@@ -299,3 +299,47 @@ function sumPrimes(num) {
 }
 
 console.log(sumPrimes(5));
+
+
+function smallestCommons(arr) {
+  // Euclid algorithm for Greates Common Divisor
+  function gcd(a, b)
+  {
+  	return !b ? a : gcd(b, a % b);
+  }
+
+  // Least Common Multiple function
+  function lcm(a, b)
+  {
+  	return a * (b / gcd(a,b));
+  }
+
+  if(arr[0] > arr[1]) (arr = [arr[1], arr[0]]);
+
+	for(x = result = arr[0]; x <= arr[1]; x++) {
+		result = lcm(x, result);
+	}
+
+	return result;
+
+}
+
+console.log(smallestCommons([1,5]));
+
+function findElement(arr, func) {
+
+  for (var x=0; x<arr.length; x++){
+    var test = arr[x];
+    if (func(test)===true){
+      return test;
+
+    }
+    else{
+
+    }
+
+  }
+  return undefined;
+
+}
+console.log(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }));
