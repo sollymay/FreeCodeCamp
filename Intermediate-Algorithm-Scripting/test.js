@@ -343,3 +343,18 @@ function findElement(arr, func) {
 
 }
 console.log(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }));
+
+function dropElements(arr, func) {
+  // Drop them elements.
+  var filtered_array=[];
+  for (var i=0; i<arr.length; i++){
+    if (func(arr[i])===true){
+      filtered_array=(arr.slice(i,arr.length));
+      break;
+    }
+
+  }
+  return filtered_array;
+}
+
+console.log(dropElements([1, 2, 3], function(n) {return n >1; }));
