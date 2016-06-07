@@ -396,8 +396,23 @@ function binaryAgent(str) {
 console.log(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"));
 
 function truthCheck(collection, pre) {
-  // Is everyone being true?
-  return pre;
+  // Is everyone being true
+  var counter=0;
+
+  for (var i=0; i<collection.length;i++){
+    var newValue = collection[i][pre] || 0;
+
+    if (newValue===0 ){
+
+    }
+    else {
+      counter++;
+    }
+  }
+  if (counter== collection.length){
+    return true;
+  }
+  return false;
 }
 
-truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
+console.log(truthCheck([{"user": "Tinky-Winky", "sex": "male", "age": 0}, {"user": "Dipsy", "sex": "male", "age": 3}, {"user": "Laa-Laa", "sex": "female", "age": 5}, {"user": "Po", "sex": "female", "age": 4}], "age"));
