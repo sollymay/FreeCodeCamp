@@ -416,3 +416,40 @@ function truthCheck(collection, pre) {
 }
 
 console.log(truthCheck([{"user": "Tinky-Winky", "sex": "male", "age": 0}, {"user": "Dipsy", "sex": "male", "age": 3}, {"user": "Laa-Laa", "sex": "female", "age": 5}, {"user": "Po", "sex": "female", "age": 4}], "age"));
+
+function addTogether() {
+
+  function isNumber(testNumber){
+    if (typeof testNumber == 'number'){
+      return true;
+    }
+    else return false;
+  }
+
+  if (arguments.length >=2){
+    if (isNumber(arguments[0]) && isNumber(arguments[1])){
+      return arguments[0] + arguments[1];
+    }
+    else {
+      return undefined;
+    }
+  }
+
+  else{
+      var arg1 = arguments[0];
+      if (isNumber(arg1)){
+      return function(newNumber){
+        if(isNumber(newNumber)){
+          return arg1 + newNumber;
+        }
+      };
+
+      }
+      else {
+        return undefined;
+      }
+  }
+}
+
+
+console.log(addTogether(2)(3));
