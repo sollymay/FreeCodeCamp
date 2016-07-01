@@ -191,3 +191,265 @@ function booWho(bool) {
 }
 
 console.log(booWho(null));
+
+function uniteUnique(arr1, arr2, arr3) {
+  var another_array=[]
+  var testArray =[]
+  for (var i=0; i<arguments.length; i++){
+      testArray=arguments[i]
+     for (var j=0; j<testArray.length; j++){
+
+       if (!(testArray[j] in another_array)){
+         another_array.push(testArray[j])
+       }
+     }
+     testArray=[]
+  }
+
+  return another_array
+
+
+}
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+function convertHTML(str) {
+  var tempStr = str
+
+  for (var i=0; i<tempStr.length; i++){
+    switch (tempStr[i]) {
+      case '&':
+        tempStr = tempStr.replace('&', '&amp;');
+        break;
+      case '<':
+        tempStr = tempStr.replace('<', '&lt;');
+        break;
+      case '>':
+        tempStr = tempStr.replace('>', '&gt;');
+        break;
+      case"'":
+      tempStr = tempStr.replace("'", '&apos;');
+        break;
+      case '"':
+      tempStr = tempStr.replace('"', '&quot;');
+        break;
+      default:
+        break;
+
+    }
+  }
+  // &colon;&rpar;
+  return tempStr;
+}
+
+console.log(convertHTML('Stuff in "quotation marks"'));
+
+
+function spinalCase(str) {
+  // "It's such a fine line between stupid, and clever."
+  // --David St. Hubbins
+  return str.replace(/(?!^)([A-Z])/g, ' $1')
+              .replace(/[_\s]+(?=[a-zA-Z])/g, '-').toLowerCase();
+
+}
+
+console.log(spinalCase('This Is Spinal Tap'));
+
+
+function sumFibs(num) {
+  var w = 1; //start the fibonacci at 1 to add it
+  var a = 0, b = 1, f = 1; //do the fibonacci sequence loop
+    for(var i = 2; i <= num; i++) {
+        f = a + b;
+        a = b;
+        b = f;
+        if (b> num){ //break at the moment we get to the value in question
+          break;
+        }
+        if (f%2 !==0){ //only add the odd values
+          w += f;
+
+        }
+
+    }
+     return w;
+}
+
+console.log(sumFibs(1));
+
+function sumPrimes(num) {
+  var sum=0;
+  function isPrime(value){
+    for(var i = 2; i < value; i++) {
+    if(value % i === 0) {
+        return false;
+      }
+    }
+    return value;
+  }
+
+  for (var i=2; i<=num; i++){
+    if (isPrime(i) === false){}
+    else{
+        sum+= isPrime(i);
+    }
+
+  }
+  return sum;
+}
+
+console.log(sumPrimes(5));
+
+
+function smallestCommons(arr) {
+  // Euclid algorithm for Greates Common Divisor
+  function gcd(a, b)
+  {
+  	return !b ? a : gcd(b, a % b);
+  }
+
+  // Least Common Multiple function
+  function lcm(a, b)
+  {
+  	return a * (b / gcd(a,b));
+  }
+
+  if(arr[0] > arr[1]) (arr = [arr[1], arr[0]]);
+
+	for(x = result = arr[0]; x <= arr[1]; x++) {
+		result = lcm(x, result);
+	}
+
+	return result;
+
+}
+
+console.log(smallestCommons([1,5]));
+
+function findElement(arr, func) {
+
+  for (var x=0; x<arr.length; x++){
+    var test = arr[x];
+    if (func(test)===true){
+      return test;
+
+    }
+    else{
+
+    }
+
+  }
+  return undefined;
+
+}
+console.log(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }));
+
+function dropElements(arr, func) {
+  // Drop them elements.
+  var filtered_array=[];
+  for (var i=0; i<arr.length; i++){
+    if (func(arr[i])===true){
+      filtered_array=(arr.slice(i,arr.length));
+      break;
+    }
+
+  }
+  return filtered_array;
+}
+
+console.log(dropElements([1, 2, 3], function(n) {return n >1; }));
+
+function steamrollArray(arr) {
+  var final_array = [];
+  for (var i=0; i<arr.length; i++){
+      checkArray(arr[i]);
+  }
+
+  function checkArray(testObject){
+    if (Array.isArray(testObject)){
+      for (var j=0;j<testObject.length;j++){
+          checkArray(testObject[j]);
+      }
+    }
+    else {
+      final_array.push(testObject);
+    }
+  }
+  // I'm a steamroller, baby
+  return final_array;
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]));
+
+
+function binaryAgent(str) {
+  var w = [];
+  var characters = str.split(" ");
+  for (var i=0; i<characters.length; i++){
+     w.push(String.fromCharCode(parseInt(characters[i], 2)));
+
+  }
+
+  return w.join("");
+}
+
+console.log(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"));
+
+function truthCheck(collection, pre) {
+  // Is everyone being true
+  var counter=0;
+
+  for (var i=0; i<collection.length;i++){
+    var newValue = collection[i][pre] || 0;
+
+    if (newValue===0 ){
+
+    }
+    else {
+      counter++;
+    }
+  }
+  if (counter== collection.length){
+    return true;
+  }
+  return false;
+}
+
+console.log(truthCheck([{"user": "Tinky-Winky", "sex": "male", "age": 0}, {"user": "Dipsy", "sex": "male", "age": 3}, {"user": "Laa-Laa", "sex": "female", "age": 5}, {"user": "Po", "sex": "female", "age": 4}], "age"));
+
+function addTogether() {
+
+  function isNumber(testNumber){
+    if (typeof testNumber == 'number'){
+      return true;
+    }
+    else return false;
+  }
+
+  if (arguments.length >=2){
+    if (isNumber(arguments[0]) && isNumber(arguments[1])){
+      return arguments[0] + arguments[1];
+    }
+    else {
+      return undefined;
+    }
+  }
+
+  else{
+      var arg1 = arguments[0];
+      if (isNumber(arg1)){
+      return function(newNumber){
+        if(isNumber(newNumber)){
+          return arg1 + newNumber;
+        }
+      };
+
+      }
+      else {
+        return undefined;
+      }
+  }
+}
+
+
+console.log(addTogether(2)(3));
