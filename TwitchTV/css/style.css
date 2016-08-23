@@ -1,11 +1,5 @@
 body{
-  background-color:#778f9d !important;
-}
-.extract{
-	padding-left:20px;
-}
-.post-title{
-	padding-left:10px;
+  background-color: #F2F3F4;
 }
 p{
   font-size: 16px;
@@ -13,11 +7,17 @@ p{
 }
 a{
 	text-decoration:none !important;
-	color:black !important;
+	color:#2C3E50 !important;
 }
 a:hover{
 	text-decoration:none !important;
-	color:black !important;
+	color:#2C3E50 !important;
+}
+li{
+  padding: 10px;
+}
+h4{
+  font-family: 'Lato', sans-serif;
 }
 #filtersubmit, #random {
 
@@ -27,10 +27,79 @@ a:hover{
 
     color: black;
 }
+#online > li{
+  list-style: none;
+}
+#status{
+
+}
+.online{
+  border: 2px solid grey;
+  border-top: 0;
+
+  background-color: #D4E6F1;
+}
+.offline{
+  border-bottom: 2px solid grey;
+  background-color: #D4E6F1;
+
+}
+.status >div{
+  padding-top: 5px;
+}
+.all{
+  border-bottom: 2px solid grey;
+
+  background-color: #82E0AA;
+}
+.main-window{
+  margin:auto;
+  margin-top: 50px;
+  border: 2px solid #2C3E50;
+  border-radius: 5px;
+  background-color: #F6DDCC;
+}
+
+#offline > li{
+  list-style: none;
+
+}
+#online > p {
+  font-style: italic;
+  margin-left: 30px;
+  font-size: 12px;
+}
+
+#online > li:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    color: #82E0AA; /* or whatever color you prefer */
+    margin-right: 4px;
+
+}
+
+#offline{
+  margin-top: -10px;
+}
+#offline > li:before {
+    content: "\f00d";
+    font-family: FontAwesome;
+    color: #F1948A; /* or whatever color you prefer */
+    margin-right: 4px;
+
+}
+#online >li{
+  color:#2C3E50;
+}
+
+#offline >li{
+  color:grey;
+}
 .footer{
-	margin-top: 50px;
+
   min-width: 95%;
 }
+
 
 #filter{
   padding: 10px 10px 10px 10px;
@@ -56,10 +125,10 @@ a:hover{
   border-style: solid;
 
 
-  color: black;
+  color: #2C3E50;
 }
 h3{
-  color:black !important;
+  color:#2C3E50 !important;
   font-family: 'Poiret One', cursive !important;
   font-weight: bold !important;
 }
@@ -97,7 +166,7 @@ padding: 11px 14px 11px 14px;
 }
 
 .foot{
-  color:black !important;
+  color:#2C3E50 !important;
   font-family: Indie Flower;
   font-size: 16px;
 }
@@ -105,4 +174,12 @@ padding: 11px 14px 11px 14px;
    .collapse {
        display: none !important;
    }
+   .status > div{
+    align-items: center !important;
+   }
+   .online{
+     border-left: 0 !important;
+     border-right: 0 !important;
+   }
+
 }

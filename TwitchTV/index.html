@@ -1,16 +1,85 @@
-Ó<html>
+<html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="js/script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css"/ >
   </head>
 
   <body>
-    <div id="test"></div>
+
+    <div class="row">
+
+
+    <div class="col-md-4">
+
+    </div>
+    <div class="container main-window col-md-4">
+      <div class="row status">
+        <div class="col-md-4 all text-center" onclick="filterChannels()">
+          <h4>
+            ALL
+          </h4>
+        </div>
+        <div class="col-md-4 online text-center" onclick="filterChannels(online)">
+          <h4>
+            ONLINE
+          </h4>
+        </div>
+        <div class="col-md-4 offline text-center" onclick="filterChannels(offline)">
+          <h4>
+            OFFLINE
+          </h4>
+        </div>
+      </div>
+
+      <div class="row">
+    <div id="bla">
+      <p id = "status" class="text-center">
+         ONLINE/OFFLINE
+      </p>
+      <ul id = "online">
+
+      </ul>
+    </div>
+    <div>
+      <ul id = "offline">
+
+      </ul>
+    </div>
+
+
+      <div class="row">
+      </br>
+    <div>
+      <div class="row text-center">
+      <a class="icon" id="twitter" href="https://twitter.com/sollymay"><i class="fa fa-twitter"></i></a>
+      <a class="icon" id="facebook" href="https://www.facebook.com/sollymay"><i class="fa fa-facebook"></i></a>
+      <a class="icon" id="email" href="mailto:sollymay@gmail.com"><i class="fa fa-envelope text-center"></i></a>
+      <a class="icon" id="github" href="https://github.com/sollymay"><i class="fa fa-github"></i></a>
+      <a class="icon" id="linkedin" href="https://www.linkedin.com/in/salomon-may-korn-51987434"><i class="fa fa-linkedin"></i></a>
+    </div>
+      <br />
+      <br />
+      <p class="text-center foot" >Made with <i class="fa fa-coffee"></i> <i class="fa fa-music"></i> and <i class="fa fa-heart"></i> in Miami, FL</p>
+      <p class="text-center foot">Salomon May &copy; <script>document.write(new Date().getFullYear())</script> </p>
+    </div>
+    <div class="col-md-4"></div>
+    <br />
+    </div>
+
+    <div class="col-md-4">
+
+    </div>
+    </div>
+    </div>
+  </div>
   </body>
 
-  <footer>
 
-  </footer>
 </html>
