@@ -75,7 +75,9 @@ function handleErr(jqxhr, textStatus, err) {
 
 function getLocation(response){
   document.getElementById("city").innerHTML = response.city + ', '+ response.country;
-  $.getJSON("https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?lat="+ response.lat+ "&lon=" + response.lon +"&APPID=4f8fe6c234a7b2829ab551e55c3e75da")
+  console.log(response.city);
+  console.log(response.lat, response.lon);
+  $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+ response.lat+ "&lon=" + response.lon +"&APPID=4f8fe6c234a7b2829ab551e55c3e75da")
     .done(update)
     .fail(handleErr);
 }
