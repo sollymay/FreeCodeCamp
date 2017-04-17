@@ -91,7 +91,7 @@ var Person = function(firstAndLast) {
 };
 
 function updateInventory(arr1, arr2) {
-    if (arr1.length ==0){
+    if (arr1.length ===0){
         var arr2_fixed = reverseList(arr2);
         arr2_fixed.sort();
         finalArray = reverseList(arr2_fixed);
