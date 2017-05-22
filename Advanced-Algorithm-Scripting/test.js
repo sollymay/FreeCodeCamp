@@ -42,9 +42,78 @@ function sym() {
 sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]);
 
 function checkCashRegister(price, cash, cid) {
-  var change;
-  // Here is your change, ma'am.
-  return change;
+  cash = cash*100;
+  price = price*100;
+  var change = cash-price;
+  var change2 = change;
+
+  var total = 0;
+  var getTotalInRegister = function(cid){
+
+     for (var index=0; index< cid.length; index++){
+        total+=cid[index][1]*100;
+     }
+     return total.toFixed(2);
+  };
+
+
+  var calculateChange = function(price, cash, cid){
+    var finalResult = [];
+    var totalInRegister = getTotalInRegister(cid);
+
+    if (totalInRegister < change){
+      return "Insufficient Funds";
+    }
+    else if (totalInRegister==change) {
+      return "Closed";
+    }
+    else {
+
+      for (var i = cid.length -1; i >= 0; i--) {
+        var denominationTotalValue = cid[i][1]*100,
+            denominationValue = getValue(cid[i][0]),
+            denominationAmount = denominationTotalValue / denominationValue,
+            changeCalc = 0;
+
+        while (change2 >= denominationValue && denominationAmount >0) {
+          change2 -= denominationValue;
+          denominationAmount--;
+          changeCalc++;
+        }
+        if (changeCalc >0){
+          finalResult.push([cid[i][0], changeCalc*(denominationValue/100)]);
+        }
+      }
+      if (change2 != 0){
+        return "Insufficient Funds";
+      }
+      return finalResult;
+    }
+  };
+  var getValue = function(denomination){
+    switch(denomination){
+      case 'PENNY':
+          return 1;
+      case 'NICKEL':
+          return 5;
+      case 'DIME':
+          return 10;
+      case 'QUARTER':
+          return 25;
+      case 'ONE':
+          return 100;
+      case 'FIVE':
+          return 500;
+      case 'TEN':
+          return 1000;
+      case 'TWENTY':
+          return 2000;
+      case 'ONE HUNDRED':
+          return 10000;
+    }
+  };
+  return calculateChange(price, cash, cid);
+
 }
 
 // Example cash-in-drawer array:
@@ -58,7 +127,7 @@ function checkCashRegister(price, cash, cid) {
 // ["TWENTY", 60.00],
 // ["ONE HUNDRED", 100.00]]
 
-checkCashRegister(19.50, 20.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]]);
+console.log(checkCashRegister(19.50, 20.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]]));
 
 
 
@@ -145,5 +214,3 @@ var newInv = [
     [13, "Papas"],
     [45, "Comida"]
 ];
-
-console.log(updateInventory([], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"], [7, "Toothpaste"]]));
