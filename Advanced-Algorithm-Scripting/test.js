@@ -214,3 +214,5 @@ var newInv = [
     [13, "Papas"],
     [45, "Comida"]
 ];
+
+console.log("hello")
